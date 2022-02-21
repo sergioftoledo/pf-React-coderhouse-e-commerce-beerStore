@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: #000;
+}
+
+.logo {
+    width: 160px
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+}
+
+.navegacion a {
+    text-decoration: none;
+}
+
+.navegacion a li {
+    list-style: none;
+    padding: 0 6px;
+    margin: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
