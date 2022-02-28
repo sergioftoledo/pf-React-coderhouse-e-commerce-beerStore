@@ -1,0 +1,69 @@
+.contenedor-contador {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-contador-botones {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #000; */
+    border-radius: 4px;
+}
+
+.disminuir-cantidad,
+.aumentar-cantidad {
+    width: 50px;
+}
+
+.disminuir-cantidad:hover {
+    color: #fff;
+    background-color: #a80707;
+    border-radius: 5px;
+}
+
+.aumentar-cantidad:hover {
+    color: #fff;
+    background-color: #108101;
+    border-radius: 5px;
+}
+
+.contenedor-contador-botones button {
+    font-size: 2rem;
+    border: none;
+    background-color: #fff;
+}
+
+.contenedor-agregar-carrito {
+    width: 12.5rem;
+    height: 3rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.contenedor-agregar-carrito:hover {
+    background-color: #108101;
+}
+
+.agregrar-carrito {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    border: none;
+    text-transform: uppercase;
+}
+
+.agregrar-carrito:hover {
+    color: #fff;
+    background-color: #108101;
+}

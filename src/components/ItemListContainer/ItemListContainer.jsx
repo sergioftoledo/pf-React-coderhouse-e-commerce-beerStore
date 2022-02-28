@@ -1,9 +1,13 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 import './ItemListContainer.css'
 
-function ItemListContainer() {
+function ItemListContainer({ saludo }) {
   return (
-    <div className="contenedor-items">¡greeting!</div>
+    <>
+      <div className="contenedor-items">{ saludo }</div>
+      <ItemCount />
+    </>
   )
 }
 
