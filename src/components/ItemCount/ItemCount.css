@@ -44,8 +44,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
-    border-radius: 4px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .contenedor-agregar-carrito:hover {
@@ -66,4 +66,5 @@
 .agregrar-carrito:hover {
     color: #fff;
     background-color: #108101;
+    border-radius: 5px;
 }
