@@ -14,7 +14,7 @@ function ItemCount({ stock, initial, onAdd }) {
 
     // Saca un producto del contador si hay más de uno.
     const restar = () => {
-        if (count > 1) {
+        if (count > initial) {
             setCount(count -1)
         }
     }
