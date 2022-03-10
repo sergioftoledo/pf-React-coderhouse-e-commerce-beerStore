@@ -1,14 +1,3 @@
-.contenedor-items {
-    display: flex;
-    flex-direction: row;
-}
-
-.contenedor-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Spinner */
 .spinner {
     display: inline-block;
@@ -42,4 +31,8 @@ animation: spineer 1.2s infinite;
 100% {
     transform: rotate(1800deg);
     }
+}
+
+.fondo-producto-detalle {
+    background-image: url(../../assets/images/fondo-product-detail/fondo-detalle-productos.webp);
 }
