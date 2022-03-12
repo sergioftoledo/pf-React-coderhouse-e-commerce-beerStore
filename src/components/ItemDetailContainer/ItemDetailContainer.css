@@ -1,24 +1,13 @@
 .contenedor-items {
     padding-top: 96px;
-    /* padding-top: 13vh; */
 }
 
-.contenedor-cards {
-    padding-top: 25px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Spinner */
+Spinner
 .spinner-contenedor {
     height: 87vh;
 }
 
 .spinner {
-    /* top: 50%;
-    left: 50%; */
     display: inline-block;
     position: relative;
     width: 80px;

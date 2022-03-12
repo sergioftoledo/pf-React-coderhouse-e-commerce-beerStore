@@ -1,5 +1,11 @@
 /* Spinner */
+.spinner-contenedor {
+    width: 100%;
+}
+
 .spinner {
+    top: 50%;
+    left: 50%;
     display: inline-block;
     position: relative;
     width: 80px;
@@ -34,5 +40,65 @@ animation: spineer 1.2s infinite;
 }
 
 .fondo-producto-detalle {
+    height: 100vh;
     background-image: url(../../assets/images/fondo-product-detail/fondo-detalle-productos.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-detalle {
+    width: 950px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 200, 200, .25);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.producto-img {
+    width: 100%;
+}
+
+.producto-info-detalle {
+    margin: 0 10px 0 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.producto-info-detalle div {
+    margin: 20px 10px;
+}
+
+.producto-titulo {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+}
+
+.producto-descripcion {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.producto-stock {
+    display: flex;
+}
+
+.producto-stock span {
+    color: #000;
+    margin-right: 5px;
+}
+
+.producto-stock p {
+    color: #941010;
+    font-size: 1.2rem;
+    font-weight: 600;
 }

@@ -1,0 +1,18 @@
+.contenedor-nosotros {
+    margin: 20px auto;
+    width: 400px;
+}
+
+.titulo-nosotros {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.parrafo-nosotros {
+    text-align: justify;
+    line-height: 2;
+    font-weight: 500;
+    font-style: italic;
+}

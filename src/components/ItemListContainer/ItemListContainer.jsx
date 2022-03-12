@@ -1,26 +1,37 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { BootsCarousel } from '../Carousel/BootsCarousel'
+import Category from '../Category/Category'
 import { getProduct } from '../helpers/getProducts'
-import ItemCount from '../ItemCount/ItemCount'
-import ItemList from './ItemList'
+import ItemList from '../ItemList/ItemList'
+import Nosotros from '../Nosotros/Nosotros'
 import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 const [productos, setProductos] = useState([])
 const [loading, setLoading] = useState(true)
+const {categoryId} = useParams()
 
-  const onAdd = cantidad => {
-    console.log(cantidad)
-  }
   useEffect(() => {
+      if (categoryId) {
+        getProduct.then( res => {
+        return res
+        })
+        .then( (res) => setProductos(res.filter(categoria => categoria.category === categoryId)))
+        .catch( err =>console.log(err))
+        .finally(() => setLoading(false))
+          
+      } else {
+          getProduct.then( res => {
+            return res
+          })
+          .then( (res) => setProductos(res))
+          .catch( err =>console.log(err))
+          .finally(() => setLoading(false))          
+      }
   
-    getProduct.then( res => {
-      return res
-    })
-    .then( (res) => setProductos(res))
-    .catch( err =>console.log(err))
-    .finally(() => setLoading(false))
-  }, [])
-
+  }, [categoryId])
+console.log(categoryId)
   //! Asincronia con async (promesa)
   // try {
     // const consulta = async () => {
@@ -45,13 +56,19 @@ const [loading, setLoading] = useState(true)
 
   return (
     <>
-        <div className="contenedor-items"></div>
-        <ItemCount stock={15} initial={1} onAdd={onAdd} />
-        <div className="contenedor-cards">
-        { loading ? <div className='spinner'></div>
-        :
-        <ItemList productos= { productos }/>
-        }
+        <div className="contenedor-items">
+            { loading ? 
+            <div className='spinner-contenedor'>
+                <div className='spinner'>CARGANDO...</div>
+            </div>
+            :
+            <div>
+                <BootsCarousel />                    
+                <Nosotros />
+                <Category />
+                <ItemList productos= { productos }/>
+            </div>
+            }
         </div>
     </>
   )
