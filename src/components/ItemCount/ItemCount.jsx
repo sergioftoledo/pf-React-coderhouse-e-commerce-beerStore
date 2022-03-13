@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { HashLink } from 'react-router-hash-link'
 import './ItemCount.css'
 
 function ItemCount({ stock, initial, onAdd }) {
     const [count, setCount] = useState(initial)
+    const [cambiarBoton, setCambiarBoton] = useState(true)
 
     // Agrega un producto al contador.
     const sumar = () => {
@@ -19,6 +21,11 @@ function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
+    const agregarAlCarrito = () => {
+        onAdd(count)
+        setCambiarBoton(false)
+    }
+
   return (
     <>
         <div className='contenedor-contador'>
@@ -27,9 +34,20 @@ function ItemCount({ stock, initial, onAdd }) {
                 <span className='contador'>{ count }</span>
                 <button className='aumentar-cantidad' onClick={ sumar }>+</button>
             </div>
-            <div className='contenedor-agregar-carrito'>
-                <button className='agregrar-carrito' onClick={ () => onAdd(count) }>agregar al carrito</button>
-            </div>
+            {/* <div className='contenedor-agregar-carrito'> */}
+                {cambiarBoton ?
+                <button className='agregrar-carrito' onClick={ agregarAlCarrito }>agregar al carrito</button>
+            // </div>
+                :
+                <div className='contenedor-post-agregar-carrito'>
+                    <HashLink to='/#home'>
+                        <button>seguir comprando</button>
+                    </HashLink>
+                    <HashLink to='/cart'>
+                        <button>terminar compra</button>
+                    </HashLink>
+                </div>
+                }
         </div>
     </>
   )

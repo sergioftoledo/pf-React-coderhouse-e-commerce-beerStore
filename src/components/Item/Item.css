@@ -49,11 +49,11 @@
     margin: 7px;
     text-transform: uppercase;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .producto-detalles-boton:hover {
     cursor: pointer;
+    color: #fff;
     background-color: #0275fd;
-    transition: 0.3s;
-    font-family: 'Poppins', sans-serif;
 }

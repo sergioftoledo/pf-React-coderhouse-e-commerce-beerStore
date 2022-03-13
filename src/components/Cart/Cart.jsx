@@ -1,7 +1,7 @@
 import './Cart.css'
 const Cart = () => {
   return (
-    <div className='contenedor-cart'>Cart</div>
+    <div className='contenedor-cart' id='cart'>Cart</div>
   )
 }
 

@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
@@ -33,7 +34,12 @@ const ItemDetail = ({producto}) => {
                 <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
                 :
                 <div>
-                    <button className='sin-stock'> no disponible</button>
+                    <div>
+                        <button className='sin-stock'> no disponible</button>
+                    </div>
+                    <HashLink to='/#home' className='contenedor-regresar-menu'>
+                        <button className='regresar-menu'> seguir comprando</button>
+                    </HashLink>
                 </div>
                 }
             </div>
