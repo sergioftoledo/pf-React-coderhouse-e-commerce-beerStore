@@ -24,7 +24,7 @@ function ItemCount({ stock, initial, onAdd }) {
         <div className='contenedor-contador'>
             <div className='contenedor-contador-botones'>
                 <button className='disminuir-cantidad' onClick={ restar }>-</button>
-                <span>{ count }</span>
+                <span className='contador'>{ count }</span>
                 <button className='aumentar-cantidad' onClick={ sumar }>+</button>
             </div>
             <div className='contenedor-agregar-carrito'>

@@ -3,7 +3,7 @@ import './Nosotros.css'
 
 const Nosotros = () => {
   return (
-    <div className='contenedor-nosotros'>
+    <div className='contenedor-nosotros' id='nosotros'>
         <h3 className='titulo-nosotros'>
             sobre nosotros
         </h3>

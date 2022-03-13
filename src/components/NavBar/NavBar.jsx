@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import CartWidget from '../CartWidget/CartWidget'
 import logo from './logo.png'
 import './NavBar.css'
@@ -11,9 +12,9 @@ const NavBar = () => {
 		<img src={ logo } className= "logo" alt="logo beer store"/>
 		</Link>
 		<nav className="navegacion">
-			<Link to='/'><li>inicio</li></Link>
-			<Link to='/'><li>nosotros</li></Link>
-			<Link to='/'><li>productos</li></Link>
+			<HashLink to='/#home'><li>inicio</li></HashLink>
+			<HashLink to='/#nosotros'><li>nosotros</li></HashLink>
+			<HashLink to='/#category'><li>productos</li></HashLink>
 		</nav>
 	<CartWidget />
 	</header>

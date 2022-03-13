@@ -40,20 +40,37 @@ animation: spineer 1.2s infinite;
 }
 
 .fondo-producto-detalle {
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url(../../assets/images/fondo-product-detail/fondo-detalle-productos.webp);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.contenedor-categoria-titulo {
+    width: 700px;
+    background-color: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.contenedor-categoria-titulo h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 5px 0;
+}
+
+
 .contenedor-detalle {
-    width: 950px;
-    margin: auto;
+    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(200, 200, 200, .25);
+    background-color: rgba(180, 180, 180, .45);
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
@@ -63,7 +80,7 @@ animation: spineer 1.2s infinite;
 }
 
 .producto-info-detalle {
-    margin: 0 10px 0 0;
+    margin: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -95,10 +112,38 @@ animation: spineer 1.2s infinite;
 .producto-stock span {
     color: #000;
     margin-right: 5px;
+    font-weight: 600;
 }
 
 .producto-stock p {
     color: #941010;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.producto-precio,
+.precio-final {
+    text-transform: uppercase;
     font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Botón sin stock */
+
+.sin-stock {
+    width: 12.5rem;
+    height: 3rem;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #8b3b3b;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.sin-stock:not(:disabled) {
+    cursor: none;
 }

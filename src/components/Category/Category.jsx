@@ -7,27 +7,27 @@ import './Category.css'
 
 const Category = () => {
   return (
-    <div className='contenedor-categoria'>
+    <div className='contenedor-categoria' id='category'>
         <div>
-            <Link to='category/caca'>
+            <Link to='/'>
                 <img src={todos} alt="" />
                 <h2>todos</h2>
             </Link>            
         </div>
         <div>
-            <Link to='category/pilsener'>
+            <Link to='/category/pilsener'>
                 <img src={pilsener} alt="" />
                 <h2>pilsener</h2>
             </Link>
         </div>
         <div>
-            <Link to='category/stout'>
+            <Link to='/category/stout'>
                 <img src={stout} alt="" />
                 <h2 className='stout'>stout</h2>
             </Link>
         </div>
         <div>
-            <Link to='category/ipa'>
+            <Link to='/category/ipa'>
                 <img src={ipa} alt="" />
                 <h2>ipa</h2>
             </Link>

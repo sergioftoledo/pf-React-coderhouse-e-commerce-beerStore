@@ -56,7 +56,7 @@ console.log(categoryId)
 
   return (
     <>
-        <div className="contenedor-items">
+        <div className="contenedor-items" id='home'>
             { loading ? 
             <div className='spinner-contenedor'>
                 <div className='spinner'>CARGANDO...</div>
@@ -66,7 +66,7 @@ console.log(categoryId)
                 <BootsCarousel />                    
                 <Nosotros />
                 <Category />
-                <ItemList productos= { productos }/>
+                <ItemList productos= { productos } />
             </div>
             }
         </div>

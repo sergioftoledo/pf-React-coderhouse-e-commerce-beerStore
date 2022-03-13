@@ -2,7 +2,7 @@
 
 .tarjeta {
     background-color: black;
-    width: 335px;
+    width: 300px;
     margin: 1.3rem;
     display: flex;
     flex-direction: column;

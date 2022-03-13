@@ -6,7 +6,10 @@ const onAdd = cantidad => {
   }
 const ItemDetail = ({producto}) => {
   return (
-      <div className='fondo-producto-detalle'>
+  <div className='fondo-producto-detalle'>
+    <div className='contenedor-categoria-titulo'>
+        <h3>categoría: {producto.category}</h3>
+    </div>
         <div className='contenedor-detalle'>
             <div className='contenedor-producto-img'>
                 <img className='producto-img' src={producto.pictureURL} alt="" />
@@ -19,14 +22,22 @@ const ItemDetail = ({producto}) => {
                     {producto.description}
                 </div>
                 <div className="producto-stock">
-                    <span>stock disponible: </span><p>{producto.stock}</p>
+                    <span>stock disponible: </span>
+                    <p>{producto.stock}</p>
                 </div>
-                <div className="producto-precio">
-                    ${producto.price}
+                <div>
+                    <span className="producto-precio">precio: </span>
+                    <span className="precio-final">${producto.price}</span>
                 </div>
-                <ItemCount stock={15} initial={1} onAdd={onAdd} />
+                {producto.stock > 0 ?
+                <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+                :
+                <div>
+                    <button className='sin-stock'> no disponible</button>
+                </div>
+                }
             </div>
-        </div>        
+        </div>
     </div>
     
   )

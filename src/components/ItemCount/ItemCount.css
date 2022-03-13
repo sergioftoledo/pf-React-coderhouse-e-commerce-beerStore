@@ -1,5 +1,4 @@
 .contenedor-contador {
-    width: 200px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -10,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #000; */
     border-radius: 4px;
 }
 
@@ -26,16 +24,15 @@
     border-radius: 5px;
 }
 
+.contador {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
 .aumentar-cantidad:hover {
     color: #fff;
     background-color: #108101;
     border-radius: 5px;
-}
-
-.contenedor-contador-botones button {
-    font-size: 2rem;
-    border: none;
-    background-color: #fff;
 }
 
 .contenedor-agregar-carrito {
