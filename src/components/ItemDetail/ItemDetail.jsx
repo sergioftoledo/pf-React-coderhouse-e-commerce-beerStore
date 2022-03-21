@@ -1,11 +1,18 @@
 import { HashLink } from 'react-router-hash-link'
+import { useCartContext } from '../context/cartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
-const onAdd = cantidad => {
-    console.log(cantidad)
-  }
-const ItemDetail = ({producto}) => {
+
+const ItemDetail = ({ producto }) => {
+    const { addToCart, cartList } = useCartContext()
+    
+    const onAdd = quantity => {
+        console.log(quantity)
+        addToCart({...producto, quantity: quantity})
+      }
+      console.log(cartList)
+
   return (
   <div className='fondo-producto-detalle'>
     <div className='contenedor-categoria-titulo'>

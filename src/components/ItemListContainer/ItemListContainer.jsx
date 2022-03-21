@@ -31,7 +31,6 @@ const {categoryId} = useParams()
       }
   
   }, [categoryId])
-console.log(categoryId)
   //! Asincronia con async (promesa)
   // try {
     // const consulta = async () => {
